@@ -14,10 +14,11 @@ ActiveRecord::Schema.define(version: 20171019023021) do
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
+    t.string   "author"
     t.text     "description"
+    t.string   "isbn_13"
     t.string   "image_url"
     t.decimal  "price",       precision: 8, scale: 2
-    t.string   "isbn"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
