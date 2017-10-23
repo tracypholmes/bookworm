@@ -21,10 +21,9 @@ class LineItemsController < ApplicationController
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product)
     if @line_item.save
-      redirect_to @line_item.cart,
-        notice: 'Line item was successfully created.'
+      redirect_to @line_item.cart
     else
-      render :new 
+      render :new
     end
   end
 
